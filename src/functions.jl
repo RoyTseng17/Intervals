@@ -10,9 +10,9 @@ function create_dummy(pos)
         start = typemax(Int)
         finish = typemax(Int)
     end
-    time = Dict("start" => start,
-        "finish" => finish)
+    time = Time(Dict("start" => start,
+        "finish" => finish))
    
-    interval_detail = IntervalDetails("Dummy", "Dummy", time)
+    interval_detail = IntervalDetails("Dummy", time)
     return Dummy(interval_detail)
 end
