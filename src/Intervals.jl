@@ -1,5 +1,6 @@
 module Intervals
 
-export OrderBlock
+export OrderBlock, 
+       Time
     include("./structs.jl")
 end # module
