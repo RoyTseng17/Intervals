@@ -5,5 +5,5 @@ export OrderBlock,
        create_dummy, 
        init_interval_list
     include("./structs.jl")
-    include("./function.jl")
+    include("./functions.jl")
 end # module
