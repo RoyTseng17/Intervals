@@ -1,0 +1,4 @@
+name = "Intervals"
+uuid = "46b78ae3-0e2f-450b-bb9e-9bba25d367da"
+authors = ["Roy Tseng <stu121645162002@gmail.com>"]
+version = "0.1.0"
