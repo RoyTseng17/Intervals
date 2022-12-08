@@ -1,5 +1,7 @@
 function init_interval_list!()
-    return [create_dummy("front"), create_dummy("rear")]
+
+    
+    return Any[create_dummy("front"), create_dummy("rear")]
 end
 
 function create_dummy(pos)
