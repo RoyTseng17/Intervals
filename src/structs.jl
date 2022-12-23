@@ -28,7 +28,7 @@ abstract type Block <: Interval end
 ## OrderBlock
 struct OrderBlock <: Block
     attributes::IntervalDetails
-    OrderBlock(id::String, start, duration, finish) = new(IntervalDetails(id, Time(start, duration, finish)))
+    OrderBlock(id::String, start, duration) = new(IntervalDetails(id, Time(start, duration, start+duration)))
 end
 
 ## Forbidden
