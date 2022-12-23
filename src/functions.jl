@@ -22,7 +22,7 @@ function create_dummy(pos)
 end
 
 
-get_id(inter::Interval) = inter.attributes.time.id
+get_id(inter::Interval) = inter.attributes.id
 get_start(inter::Interval) = inter.attributes.time.start
 get_finish(inter::Interval) = inter.attributes.time.finish
 get_duration(inter::Interval) = inter.attributes.time.duration
