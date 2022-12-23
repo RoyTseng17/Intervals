@@ -45,5 +45,5 @@ Base.isless(a::Interval, b::Interval) = a.attributes.time.start < b.attributes.t
 Base.isequal(a::Interval, b::Interval) = a.attributes.time.start == b.attributes.time.start
 
 function Base.show(io::IO, inter::Interval)
-    println(io, "$(typeof(inter)) $(get_name(inter)) ($(get_start(inter)), $(get_duration(inter)), $(get_finish(inter)))")
+    println(io, "$(typeof(inter)) $(get_id(inter)) ($(get_start(inter)), $(get_duration(inter)), $(get_finish(inter)))")
 end
