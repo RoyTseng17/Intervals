@@ -1,3 +1,5 @@
+
+
 function init_interval_list!()
 
     
@@ -17,4 +19,34 @@ function create_dummy(pos)
    
     interval_detail = IntervalDetails("Dummy", time)
     return Dummy(interval_detail)
+end
+
+get_name(inter::Interval) = inter.attributes.name
+get_key(inter::Interval) = inter.attributes.key
+get_start(inter::Interval) = inter.attributes.time.start
+get_finish(inter::Interval) = inter.attributes.time.finish
+get_duration(inter::Interval) = inter.attributes.time.duration
+get_setup_time(inter::Interval) = inter.attributes.time.setup_time 
+#
+function set_start(inter::Interval, time::Int)
+    inter.attributes.time.start = time
+end
+
+function set_finish(inter::Interval, time::Int)
+    inter.attributes.time.finish = time
+end
+
+function set_duration(inter::Interval, time::Int)
+    inter.attributes.time.duration = time
+end
+
+function set_setup_time(inter::Interval, time::Int)
+    inter.attributes.time.setup_time = time
+end
+
+Base.isless(a::Interval, b::Interval) = a.attributes.time.start < b.attributes.time.start
+Base.isequal(a::Interval, b::Interval) = a.attributes.time.start == b.attributes.time.start
+
+function Base.show(io::IO, inter::Interval)
+    println(io, "$(typeof(inter)) $(get_name(inter)) ($(get_start(inter)), $(get_duration(inter)), $(get_finish(inter)))")
 end
